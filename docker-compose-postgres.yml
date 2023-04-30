@@ -1,0 +1,17 @@
+## The following yaml file is the illustration to start a postgres container with docker compose yaml file as below,
+
+```yaml
+version: "3"
+services:
+  db:
+    image: "postgres:15.2"
+    container_name: "postgres"
+    environment:
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "5432:5432"
+    volumes:
+      - my_dbdata:$HOME/Documents/docker/postgres
+volumes:
+  my_dbdata:
+```
